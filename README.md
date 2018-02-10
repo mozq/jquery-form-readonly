@@ -1,4 +1,4 @@
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/mozq/jquery-form-readonly/master/LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/mozq/jquery-form-readonly/master/LICENSE.txt)
 
 # jquery-form-readonly
 
@@ -69,4 +69,4 @@ Specifying false for the argument cancels read-only.
 
 ## License
 
-The jquery-form-readonly is open-sourced software licensed under the [MIT license](https://raw.githubusercontent.com/mozq/jquery-form-readonly/master/LICENSE).
+The jquery-form-readonly is open-sourced software licensed under the [MIT license](https://raw.githubusercontent.com/mozq/jquery-form-readonly/master/LICENSE.txt).
