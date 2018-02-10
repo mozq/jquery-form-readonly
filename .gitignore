@@ -17,10 +17,6 @@ Thumbs.db
 /components/
 /bower_components/
 
-# gulp
-/dist/
-/archive/
-
 # Others
 *.bak
 /bin/
