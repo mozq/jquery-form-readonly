@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script src="../jquery.form-readonly.js"></script>
+<style>
+table {
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px #333 solid;
+}
+th {
+  text-align: right;
+}
+
+label {
+  margin-right: 2ex;
+}
+</style>
+<title>query-form-readonly DEMO for plain HTML</title>
+</head>
+<body>
+<h1>jquery-form-readonly DEMO for plain HTML</h1>
+
+<form>
+  <table>
+    <tr>
+      <th>Text</th>
+      <td><input name="text" type="text" value="Test" /></td>
+    </tr>
+    <tr>
+      <th>Password</th>
+      <td><input name="password" type="password" value="Test" /></td>
+    </tr>
+    <tr>
+      <th>Checkbox / Radio</th>
+      <td>
+        <div>
+          <input name="checkRaw" type="checkbox" value="checkRaw1" checked />
+          <input name="checkRaw" type="checkbox" value="checkRaw2" />
+          <input name="checkRaw" type="checkbox" value="checkRaw3" checked />
+        </div>
+        <div>
+          <input name="radioRaw" type="radio" value="radioRaw1" />
+          <input name="radioRaw" type="radio" value="radioRaw2" checked />
+          <input name="radioRaw" type="radio" value="radioRaw3" />
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>Checkbox / Radio (Label)</th>
+      <td>
+        <div>
+          <label><input name="checkLabel" type="checkbox" value="checkLabel1" checked />Check Label 1</label>
+          <label><input name="checkLabel" type="checkbox" value="checkLabel2" />Check Label 2</label>
+          <label><input name="checkLabel" type="checkbox" value="checkLabel3" checked />Check Label 3</label>
+        </div>
+        <div>
+          <label><input name="radioLabel" type="radio" value="radioLabel1" />Radio Label 1</label>
+          <label><input name="radioLabel" type="radio" value="radioLabel2" checked />Radio Label 2</label>
+          <label><input name="radioLabel" type="radio" value="radioLabel3" />Radio Label 3</label>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>Checkbox / Radio (Label for)</th>
+      <td>
+        <div>
+          <input id="checkLabelFor1" name="checkLabelFor" type="checkbox" value="checkLabelFor1" checked /><label for="checkLabelFor1">Check Label for 1</label>
+          <input id="checkLabelFor2" name="checkLabelFor" type="checkbox" value="checkLabelFor2" /><label for="checkLabelFor2">Check Label for 2</label>
+          <input id="checkLabelFor3" name="checkLabelFor" type="checkbox" value="checkLabelFor3" checked /><label for="checkLabelFor3">Check Label for 3</label>
+        </div>
+        <div>
+          <input id="radioLabelFor1" name="radioLabelFor" type="radio" value="radioLabelFor1" /><label for="radioLabelFor1">Radio Label for 1</label>
+          <input id="radioLabelFor2" name="radioLabelFor" type="radio" value="radioLabelFor2" checked /><label for="radioLabelFor2">Radio Label for 2</label>
+          <input id="radioLabelFor3" name="radioLabelFor" type="radio" value="radioLabelFor3" /><label for="radioLabelFor3">Radio Label for 3</label>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th>File (multiple)</th>
+      <td><input name="file" type="file" value="" multiple /></td>
+    </tr>
+    <tr>
+      <th>Textarea</th>
+      <td>
+        <textarea>Line1
+Line2
+Line3</textarea>
+</td>
+    </tr>
+    <tr>
+      <th>Select (multiple)</th>
+      <td>
+        <select name="select" multiple>
+          <option value="option1" selected>Option1</option>
+          <option value="option2">Option2</option>
+          <option value="option3" selected>Option3</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+  
+  <hr />
+  
+  <input id="readonly" type="button" value="Readonly" />
+  <input id="resetReadonly" type="button" value="Reset readonly" /><br />
+  <input id="readonlyMultipleSep" type="button" value="Readonly (multiple separator: &lt;br&gt;)" />
+  <input id="readonlyPw" type="button" value="Readonly (Password: # x 16)" />
+  <input id="readonlyLabel" type="button" value="Readonly (Use labels of checkbox and radio)" />
+  <input id="readonlyIgnore" type="button" value="Readonly (Without radio)" />
+</form>
+
+<script>
+$('#readonly').on('click', function() {
+  $('form').formReadonly();
+});
+
+$('#readonlyMultipleSep').on('click', function() {
+  $('form').formReadonly({
+    multipleSeparator: $('<br>')
+  });
+});
+
+$('#readonlyPw').on('click', function() {
+  $('form').formReadonly({
+    passwordMaskChar: '#',
+    passwordMaskLength: 16
+  });
+});
+
+$('#readonlyLabel').on('click', function() {
+  $('form').formReadonly({
+    useLabel: true
+  });
+});
+
+$('#readonlyIgnore').on('click', function() {
+  $('form').formReadonly({
+    excludes: function ($elm) { return ($elm.prop('type') === 'radio'); }
+  });
+});
+
+$('#resetReadonly').on('click', function() {
+  $('form').formReadonly(false);
+});
+</script>
+</body>
+</html>

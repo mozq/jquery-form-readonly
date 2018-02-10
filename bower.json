@@ -1,0 +1,41 @@
+{
+  "name": "jquery-form-readonly",
+  "description": "A jQuery plug-in that makes HTML form elements read-only",
+  "main": "dist/jquery.form-readonly.js",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "html",
+    "form",
+    "readonly",
+    "jquery-plugin",
+    "browser",
+    "ecosystem:jquery"
+  ],
+  "authors": [
+    "Mozq"
+  ],
+  "homepage": "https://mozq.github.io/jquery-form-readonly/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mozq/jquery-form-readonly.git"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "bower_components",
+    "src",
+    "test",
+    "tests",
+    "archive",
+    "public",
+    "package.json",
+    "gulpfile.js"
+  ],
+  "dependencies": {
+    "jquery": "3.x"
+  }
+}

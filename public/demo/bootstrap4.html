@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+form {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+}
+</style>
+<title>jquery-form-readonly DEMO for Bootstrap 4</title>
+</head>
+<body>
+<h1>jquery-form-readonly DEMO for Bootstrap 4</h1>
+
+<form>
+  <div class="form-group row">
+    <label class="col-form-label col-sm-2">Text</label>
+    <div class="col-sm-10">
+      <input name="text" type="text" class="form-control" value="Test" />
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label class="col-form-label col-sm-2">Password</label>
+    <div class="col-sm-10">
+      <input name="password" type="password" class="form-control" value="Test" />
+    </div>
+  </div>
+  
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">Checkbox / Radio</legend>
+      <div class="col-sm-10">
+        <div class="form-check form-check-inline">
+          <input name="checkRaw" type="checkbox" class="form-check-input position-static" value="checkRaw1" checked />
+        </div>
+        <div class="form-check form-check-inline">
+          <input name="checkRaw" type="checkbox" class="form-check-input position-static" value="checkRaw2" />
+        </div>
+        <div class="form-check form-check-inline">
+          <input name="checkRaw" type="checkbox" class="form-check-input position-static" value="checkRaw3" checked />
+        </div>
+        <br />
+        <div class="form-check form-check-inline">
+          <input name="radioRaw" type="radio" class="form-check-input position-static" value="radioRaw1" />
+        </div>
+        <div class="form-check form-check-inline">
+          <input name="radioRaw" type="radio" class="form-check-input position-static" value="radioRaw2" checked />
+        </div>
+        <div class="form-check form-check-inline">
+          <input name="radioRaw" type="radio" class="form-check-input position-static" value="radioRaw3" />
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">Checkbox / Radio (Label)</legend>
+      <div class="col-sm-10">
+        <div class="form-check form-check-inline">
+          <label class="form-check-label"><input name="checkLabel" type="checkbox" class="form-check-input" value="checkLabel1" checked />Check Label 1</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <label class="form-check-label"><input name="checkLabel" type="checkbox" class="form-check-input" value="checkLabel2" />Check Label 2</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <label class="form-check-label"><input name="checkLabel" type="checkbox" class="form-check-input" value="checkLabel3" checked />Check Label 3</label>
+        </div>
+        <br />
+        <div class="form-check form-check-inline">
+          <label class="form-check-label"><input name="radioLabel" type="radio" class="form-check-input" value="radioLabel1" />Radio Label 1</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <label class="form-check-label"><input name="radioLabel" type="radio" class="form-check-input" value="radioLabel2" checked />Radio Label 2</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <label class="form-check-label"><input name="radioLabel" type="radio" class="form-check-input" value="radioLabel3" />Radio Label 3</label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">Checkbox / Radio (Label for)</legend>
+      <div class="col-sm-10">
+        <div class="form-check form-check-inline">
+          <input id="checkLabelFor1" name="checkLabelFor" type="checkbox" class="form-check-input" value="checkLabelFor1" checked /><label class="form-check-label" for="checkLabelFor1">Check Label for 1</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input id="checkLabelFor2" name="checkLabelFor" type="checkbox" class="form-check-input" value="checkLabelFor2" /><label class="form-check-label" for="checkLabelFor2">Check Label for 2</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input id="checkLabelFor3" name="checkLabelFor" type="checkbox" class="form-check-input" value="checkLabelFor3" checked /><label class="form-check-label" for="checkLabelFor3">Check Label for 3</label>
+        </div>
+        <br />
+        <div class="form-check form-check-inline">
+          <input id="radioLabelFor1" name="radioLabelFor" type="radio" class="form-check-input" value="radioLabelFor1" /><label class="form-check-label" for="radioLabelFor1">Radio Label for 1</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input id="radioLabelFor2" name="radioLabelFor" type="radio" class="form-check-input" value="radioLabelFor2" checked /><label class="form-check-label" for="radioLabelFor2">Radio Label for 2</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input id="radioLabelFor3" name="radioLabelFor" type="radio" class="form-check-input" value="radioLabelFor3" /><label class="form-check-label" for="radioLabelFor3">Radio Label for 3</label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  
+  <div class="form-group row">
+    <label class="col-form-label col-sm-2">File (multiple)</label>
+    <div class="col-sm-10">
+      <input name="file" type="file" class="form-control-file" value="" multiple />
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label class="col-form-label col-sm-2">Textarea</label>
+    <div class="col-sm-10">
+      <textarea class="form-control">Line1
+Line2
+Line3</textarea>
+    </div>
+  </div>
+  
+  <div class="form-group row">
+    <label class="col-form-label col-sm-2">Select (multiple)</label>
+    <div class="col-sm-10">
+      <select name="select" class="form-control" multiple>
+        <option value="option1" selected>Option1</option>
+        <option value="option2">Option2</option>
+        <option value="option3" selected>Option3</option>
+      </select>
+    </div>
+  </div>
+  
+  <hr />
+  
+  <input id="readonly" class="btn btn-outline-primary" type="button" value="Readonly" />
+  <input id="resetReadonly" class="btn btn-outline-dark" type="button" value="Reset readonly" /><br />
+  <input id="readonlyMultipleSep" class="btn btn-outline-primary" type="button" value="Readonly (multiple separator: &lt;br&gt;)" />
+  <input id="readonlyPw" class="btn btn-outline-primary" type="button" value="Readonly (Password: # x 16)" />
+  <input id="readonlyLabel" class="btn btn-outline-primary" type="button" value="Readonly (Use labels of checkbox and radio)" />
+  <input id="readonlyIgnore" class="btn btn-outline-primary" type="button" value="Readonly (Without radio)" />
+</form>
+
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="../jquery.form-readonly.js"></script>
+<script>
+$('#readonly').on('click', function() {
+  $('form').formReadonly();
+});
+
+$('#readonlyMultipleSep').on('click', function() {
+  $('form').formReadonly({
+    multipleSeparator: $('<br>')
+  });
+});
+
+$('#readonlyPw').on('click', function() {
+  $('form').formReadonly({
+    passwordMaskChar: '#',
+    passwordMaskLength: 16
+  });
+});
+
+$('#readonlyLabel').on('click', function() {
+  $('form').formReadonly({
+    useLabel: true
+  });
+});
+
+$('#readonlyIgnore').on('click', function() {
+  $('form').formReadonly({
+    excludes: function ($elm) { return ($elm.prop('type') === 'radio'); }
+  });
+});
+
+$('#resetReadonly').on('click', function() {
+  $('form').formReadonly(false);
+});
+</script>
+</body>
+</html>

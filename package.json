@@ -1,0 +1,45 @@
+{
+  "name": "jquery-form-readonly",
+  "version": "0.1.0",
+  "title": "jquery-form-readonly",
+  "description": "A jQuery plug-in that makes HTML form elements read-only.",
+  "main": "dist/jquery.form-readonly.js",
+  "license": "MIT",
+  "keywords": [
+    "html",
+    "form",
+    "readonly",
+    "jquery-plugin",
+    "browser",
+    "ecosystem:jquery"
+  ],
+  "authors": [
+    "Mozq"
+  ],
+  "homepage": "https://mozq.github.io/jquery-form-readonly/",
+  "docs": "https://mozq.github.io/jquery-form-readonly/",
+  "demo": "https://mozq.github.io/jquery-form-readonly/demo/",
+  "bugs": "https://github.com/mozq/jquery-form-readonly/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mozq/jquery-form-readonly.git"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-bump": "^3.1.0",
+    "gulp-connect": "^5.2.0",
+    "gulp-eslint": "^4.0.2",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-header": "^1.8.9",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "gulp-zip": "^4.1.0"
+  }
+}
